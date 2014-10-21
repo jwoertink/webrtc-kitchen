@@ -1,0 +1,6 @@
+DEPENDENCIES
+  asterisk
+    path: cookbooks/asterisk
+
+GRAPH
+  asterisk (0.1.0)
