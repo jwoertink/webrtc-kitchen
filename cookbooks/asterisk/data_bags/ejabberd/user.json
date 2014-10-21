@@ -1,0 +1,8 @@
+{
+  "server": "pbx.dev",
+  "port": 5222,
+  "username": "asterisk",
+  "password": "password",
+  "default_status": "It's Asterisk!",
+  "status": "available"
+}

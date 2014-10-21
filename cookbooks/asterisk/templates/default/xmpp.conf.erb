@@ -1,0 +1,16 @@
+[general]
+autoregister=<%= node['asterisk']['xmpp']['autoregister'] %>
+autoprune=<%= node['asterisk']['xmpp']['autoprune'] %>
+
+[ejabberd]
+type=client
+serverhost=<%= @user['server'] %>
+username=<%= @user['username'] %>@<%= @user['server'] %>
+secret=<%= @user['password'] %>
+priority=1
+port=<%= @user['port'] %>
+usetls=no
+usesasl=yes
+status=<%= @user['status'] %>
+statusmessage="<%= @user['default_status'] %>"
+timeout=5

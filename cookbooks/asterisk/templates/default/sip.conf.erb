@@ -1,0 +1,40 @@
+[general]
+context=<%= node['asterisk']['sip']['context'] %>
+allowguest=<%= node['asterisk']['sip']['allowguest'] %>
+allowoverlap=<%= node['asterisk']['sip']['allowoverlap'] %>
+accept_outofcall_message=<%= node['asterisk']['sip']['accept_outofcall_message'] %>
+outofcall_message_context=<%= node['asterisk']['sip']['outofcall_message_context'] %>
+realm=<%= node['asterisk']['sip']['realm'] %>
+udpbindaddr=<%= node['asterisk']['sip']['udpbindaddr'] %>
+transport=<%= node['asterisk']['sip']['transport'] %>
+language=<%= node['asterisk']['sip']['language'] %>
+icesupport=<%= node['asterisk']['sip']['icesupport'] %>
+videosupport=<%= node['asterisk']['sip']['videosupport'] %>
+nat=<%= node['asterisk']['sip']['nat'] %>
+allow=<%= node['asterisk']['sip']['allow'] %>
+
+<% @users.each do |user| %>
+[<%= user['username'] %>]
+type=friend
+username=<%= user['username'] %>
+host=dynamic
+secret=<%= user['password'] %>
+encryption=yes
+avpf=yes
+icesupport=yes
+context=<%= user['context'] %>
+callerid="<%= user['full_name'] %> <<%= user['username'] %>>"
+directmedia=no
+transport=ws,wss,udp
+force_avp=yes
+dtlsenable=yes
+dtlsverify=no
+dtlscertfile=<%= node['asterisk']['prefix']['keys'] %>/asterisk.pem
+dtlsprivatekey=<%= node['asterisk']['prefix']['keys'] %>/asterisk.pem
+dtlssetup=actpass
+videosupport=yes
+nat=no
+disallow=all
+allow=ulaw,vp8,h264
+
+<% end %>
