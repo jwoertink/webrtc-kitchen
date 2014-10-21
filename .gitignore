@@ -1,0 +1,6 @@
+.DS_Store
+/.chef
+/vendor/cookbooks
+/tmp
+.ruby-version
+.ruby-gemset
