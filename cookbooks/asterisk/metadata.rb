@@ -1,0 +1,7 @@
+name             'asterisk'
+maintainer       'Jeremy Woertink'
+maintainer_email 'jeremywoertink@gmail.com'
+license          'All rights reserved'
+description      'Installs/Configures asterisk'
+long_description 'Installs/Configures asterisk'
+version          '0.1.0'
