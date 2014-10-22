@@ -16,7 +16,7 @@ when 'debian'
   default['asterisk']['package']['repo']['key']       = '175E41DF'
 when 'rhel'
   default['asterisk']['package']['repo']['urls'] = {
-    'asterisk-11' => 'http://packages.asterisk.org/centos/$releasever/asterisk-11/$basearch/',
+    'asterisk-12' => 'http://packages.asterisk.org/centos/$releasever/asterisk-12/$basearch/',
     'asterisk-current' => 'http://packages.asterisk.org/centos/$releasever/current/$basearch/',
     'digium-asterisk-current' => 'http://packages.digium.com/centos/$releasever/current/$basearch/',
   }

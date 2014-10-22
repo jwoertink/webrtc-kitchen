@@ -8,7 +8,8 @@ default['asterisk']['source']['version']  = '12-current'
 default['asterisk']['source']['checksum'] = nil
 
 # An full download url can be supplied to specify an alternative source tarball location
-default['asterisk']['source']['url'] = nil
+default['asterisk']['source']['url'] =
+"http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-#{default['asterisk']['source']['version']}.tar.gz"
 
 # Should the sample config files be installed?
 default['asterisk']['source']['install_samples'] = true
